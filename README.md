@@ -1,5 +1,4 @@
-martenseed
-==========
+User Authentication
 
 Seed for MEAN stack applications (in Coffeescript).
 
