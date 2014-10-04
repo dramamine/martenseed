@@ -1,4 +1,4 @@
 module.exports = 
-  all: '<%= targets %>'
+  all: 'src/**/*.coffee'
   options:
     force: true

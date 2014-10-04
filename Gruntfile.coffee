@@ -12,57 +12,11 @@ module.exports = (grunt) ->
       targets:
         src: [
           'src/**/*.coffee'
-          'public/**/*.coffee'
           'src/views/*.jade'
         ]
       gruntfile: ['Gruntfile.coffee']
       bower: '<json:bower.json>'
   
-  # grunt.loadNpmTasks 'grunt-contrib-jade'
-  # grunt.loadNpmTasks 'grunt-contrib-coffee'
-  # grunt.loadNpmTasks 'grunt-shell'
-  # grunt.loadNpmTasks 'grunt-forever'
-  # grunt.loadNpmTasks 'grunt-includes'
-  # grunt.loadNpmTasks 'grunt-coffeelint'
-
-  #config
-  
-
-
-    # coffeelint:
-    #   all: '<%= targets %>'
-
-
-    # jade:
-    #   options:
-    #     pretty: true
-    #   src: ['src/**/*.jade']
-
-    # express:
-    #   options:
-    #     opts: ['/usr/bin/coffee']
-    #     script: '<%= pkg.main %>'
-    #     delay: 1
-
-    #   # prob don't need this
-    #   watch:
-    #     background: true
-
-    watch:
-      express:
-        files: '<%= targets.src %>'
-        tasks: [
-          'coffeelint'
-          'express'
-        ]
-        options:
-          spawn: false
-
-    forever:
-      server:
-        options:
-          command: 'coffee'
-          index: '<%= pkg.main %>'
 
     # copy:
     #   main:
@@ -80,11 +34,17 @@ module.exports = (grunt) ->
   
 
   grunt.registerTask 'default', [
-    'coffeelint'
+    'build'
     'express:watch'
     'watch'
     ]
 
+  grunt.registerTask 'build', [
+    'clean'
+    'copy'
+    'coffeelint'
+    'coffee'
+  ]
 
 
   # grunt.registerTask 'forever-start', [

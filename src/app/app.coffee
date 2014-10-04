@@ -9,7 +9,7 @@ martenseedApp = angular.module 'martenseedApp', [
   'ngRoute'
   'ngAnimate'
   'mgcrea.ngStrap'
-  'ngSanitize' 
+  'ngSanitize'
   'ngResource'
 ]
 

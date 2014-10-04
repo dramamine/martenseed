@@ -7,6 +7,6 @@ class Api
   # getStuff: (req, res, next) ->
   #   Stuff.find req.query, (err, docs) ->
   #     return res.send 500, err if err
-  #     res.json docs 
+  #     res.json docs
 
 module.exports = (app) -> new Api app

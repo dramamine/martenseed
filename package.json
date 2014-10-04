@@ -34,7 +34,9 @@
     "regexp-clone": "0.0.1",
     "sliced": "0.0.5",
     "q": "~1.0.1",
-    "load-grunt-config": "~0.13.2"
+    "load-grunt-config": "~0.13.2",
+    "grunt-contrib-clean": "~0.6.0",
+    "grunt-contrib-copy": "~0.5.0"
   },
   "repository": {
     "type": "git",

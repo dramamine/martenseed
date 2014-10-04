@@ -1,5 +1,5 @@
 # gets a database connection and returns it.
-# usage: 
+# usage:
 # db = require 'db.coffee'
 
 config = require './dbconfig'

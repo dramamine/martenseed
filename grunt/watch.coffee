@@ -1,6 +1,9 @@
 module.exports =
   express:
     files: '<%= targets.src %>'
-    tasks: 'express'
+    tasks: [
+      'build'
+      'express'
+    ]
     options:
       spawn: false
