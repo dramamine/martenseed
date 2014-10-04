@@ -46,6 +46,12 @@ module.exports = (grunt) ->
     'coffee'
   ]
 
+  grunt.registerTask 'test', [
+    'build'
+    'express'
+    'karma:unit'
+    'karma:unit:run'
+  ]
 
   # grunt.registerTask 'forever-start', [
   #   'forever:server:start'
